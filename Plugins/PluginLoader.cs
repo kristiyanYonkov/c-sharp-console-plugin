@@ -44,5 +44,11 @@ namespace Plugins
                 Plugins.Add((IPlugin)Activator.CreateInstance(type));
             }
         }
+
+        //pass a list of available plugins
+        public void RemovePlugin()
+        {
+            //TODO
+        }
     }
 }

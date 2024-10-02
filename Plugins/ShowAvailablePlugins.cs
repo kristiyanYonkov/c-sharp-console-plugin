@@ -22,9 +22,13 @@
 
         public void DesctiptionMethod(string parameters)
         {
+            Console.WriteLine("Available plugins:");
             foreach(IPlugin plugin in PluginLoader.Plugins)
             {
-                Console.WriteLine(string.Format("{0}: {1}", plugin.Name, plugin.Description));
+                if(plugin.Name != PLUGIN_NAME)
+                {                   
+                    Console.WriteLine(string.Format("{0}: {1}", plugin.Name, plugin.Description));
+                }
             }
         }
     }
